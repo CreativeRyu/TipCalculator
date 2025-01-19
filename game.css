@@ -1,0 +1,125 @@
+/* Basis-Stile */
+body {
+    background: #0d1412;
+    color: #cccccc;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Canvas-Stile */
+canvas {
+    image-rendering: optimizeSpeed;
+    -webkit-interpolation-mode: nearest-neighbor;
+    -ms-touch-action: none;
+    touch-action: none;
+    padding: 0;
+    border: solid rgb(182, 182, 182) 6px;
+    border-radius: 12px;
+    max-width: 100%;
+    height: auto;
+    display: block; /* Entfernt mögliche Inline-Probleme */
+    margin: 0 auto; /* Stellt sicher, dass Canvas horizontal zentriert wird */
+}
+
+/* Titel-Bereich */
+#title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 10px;
+}
+
+#title h1 {
+    margin-top: 5px;
+    text-align: center;
+    color: white;
+    font-family: "Montserrat";
+    text-shadow: 1px 1px 10px rgb(0, 184, 153), 1px 1px 10px rgb(0, 145, 77);
+    font-weight: bolder;
+    font-size: 2.5rem;
+    margin-bottom: 2px;
+}
+
+#title p {
+    text-align: center;
+    font-family: "Montserrat";
+    color: whitesmoke;
+    font-size: 1.5rem;
+}
+
+/* Emblem */
+.emblem {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin-top: 5%;
+    height: 100px;
+}
+
+/* Canvas-Container */
+.canvas-container {
+    background-color: #008060;
+    display: flex; /* Flexbox aktivieren */
+    align-items: center; /* Vertikal zentrieren */
+    justify-content: center; /* Horizontal zentrieren */
+    border-radius: 7px;
+    border: solid #008060 30px;
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0 auto; /* Zentriert den Container im Viewport */
+}
+
+/* Hover-Effekt */
+.canvas-container:hover {
+    background-color: #00936f;
+    border: solid #00936f 30px;
+}
+
+/* Vollbild-Stile */
+:-webkit-full-screen #canvas {
+    width: 100%;
+    height: 100%;
+}
+
+:-webkit-full-screen {
+    width: 100%;
+    height: 100%;
+}
+
+/* Media Query für Mobilgeräte */
+@media only screen and (max-width: 768px) {
+    #title h1 {
+        font-size: 1.8rem;
+    }
+
+    #title p {
+        font-size: 1rem;
+    }
+
+    .emblem {
+        height: 70px;
+    }
+
+    .canvas-container {
+        padding: 0 auto;
+        border: solid #008060 15px;
+        max-width: 100%; /* Reduzierte Breite */
+    }
+    .canvas-container:hover {
+        background-color: #00936f;
+        border: solid #00936f 15px;
+    }
+
+    canvas {
+        max-width: 90%; /* Flexibles Canvas */
+        height: auto;   /* Höhe bleibt proportional */
+        margin: 0 auto; /* Sicherstellen, dass das Canvas zentriert bleibt */
+    }
+}
