@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"display_cursor",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"display_cursor",
+  "parent":{
+    "name":"Skripte",
+    "path":"folders/Skripte.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
